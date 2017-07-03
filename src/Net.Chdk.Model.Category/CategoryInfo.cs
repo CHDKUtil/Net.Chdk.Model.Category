@@ -14,5 +14,19 @@
         {
             return Name.GetHashCode();
         }
+
+        public static bool operator ==(CategoryInfo categoryInfo1, CategoryInfo categoryInfo2)
+        {
+            return categoryInfo1 != null
+                ? categoryInfo1.Equals(categoryInfo2)
+                : categoryInfo2 == null;
+        }
+
+        public static bool operator !=(CategoryInfo categoryInfo1, CategoryInfo categoryInfo2)
+        {
+            return categoryInfo1 != null
+                ? !categoryInfo1.Equals(categoryInfo2)
+                : categoryInfo2 != null;
+        }
     }
 }
