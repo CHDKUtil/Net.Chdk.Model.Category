@@ -17,16 +17,16 @@
 
         public static bool operator ==(CategoryInfo categoryInfo1, CategoryInfo categoryInfo2)
         {
-            return categoryInfo1 != null
-                ? categoryInfo1.Equals(categoryInfo2)
-                : categoryInfo2 == null;
+            if (ReferenceEquals(categoryInfo1, categoryInfo2))
+                return true;
+            if ((object)categoryInfo1 == null || (object)categoryInfo2 == null)
+                return false;
+            return categoryInfo1.Equals(categoryInfo2);
         }
 
         public static bool operator !=(CategoryInfo categoryInfo1, CategoryInfo categoryInfo2)
         {
-            return categoryInfo1 != null
-                ? !categoryInfo1.Equals(categoryInfo2)
-                : categoryInfo2 != null;
+            return !(categoryInfo1 == categoryInfo2);
         }
     }
 }
