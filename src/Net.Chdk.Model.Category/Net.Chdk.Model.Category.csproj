@@ -8,6 +8,7 @@
 
   <PropertyGroup>
     <Version>0.1.0</Version>
+    <VersionSuffix>alpha</VersionSuffix>
     <Product>CHIMP</Product>
     <Authors>Dmitry Shechtman</Authors>
     <Copyright>Copyright © 2017 Dmitry Shechtman</Copyright>
@@ -16,7 +17,7 @@
   <PropertyGroup>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Net.Chdk.Model.Category</Title>
-    <PackageVersion>$(Version)-alpha</PackageVersion>
+    <PackageVersion>$(Version)-$(VersionSuffix)</PackageVersion>
     <PackageIconUrl>https://raw.githubusercontent.com/CHDKUtil/CHIMP/master/tiny.png</PackageIconUrl>
     <PackageLicenseUrl>https://raw.githubusercontent.com/CHDKUtil/Net.Chdk.Model.Category/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/CHDKUtil/Net.Chdk.Model.Category</PackageProjectUrl>
